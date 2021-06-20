@@ -50,7 +50,7 @@
           descriptionKey: "config.retrogfx.help.scanline_spacing"
         },
         scanline_opacity: {
-          default: 5,
+          default: 10,
           min: 1,
           max: 10,
           nameKey: "config.retrogfx.value.scanline_opacity",
