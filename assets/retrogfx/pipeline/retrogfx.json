@@ -1,0 +1,93 @@
+{
+  options: [
+    {
+      includeToken: "retrogfx:downscaler_config",
+      categoryKey: "config.retrogfx.category.features",
+      options: {
+        downscaler_scale: {
+          default: 10,
+          min: 1,
+          max: 10,
+          nameKey: "config.retrogfx.value.downscaler_scale",
+          descriptionKey: "config.retrogfx.help.downscaler_scale"
+        },
+        monochrome: {
+          default: false,
+          nameKey: "config.retrogfx.value.monochrome",
+          descriptionKey: "config.retrogfx.help.monochrome"
+        },
+        monochrome_r: {
+          default: 10,
+          min: 1,
+          max: 10,
+          nameKey: "config.retrogfx.value.monochrome_r",
+          descriptionKey: "config.retrogfx.help.monochrome_r"
+        },
+        monochrome_g: {
+          default: 10,
+          min: 1,
+          max: 10,
+          nameKey: "config.retrogfx.value.monochrome_g",
+          descriptionKey: "config.retrogfx.help.monochrome_g"
+        },
+        monochrome_b: {
+          default: 10,
+          min: 1,
+          max: 10,
+          nameKey: "config.retrogfx.value.monochrome_b",
+          descriptionKey: "config.retrogfx.help.monochrome_b"
+        },
+        scanlines: {
+          default: false,
+          nameKey: "config.retrogfx.value.scanlines",
+          descriptionKey: "config.retrogfx.help.scanlines"
+        },
+        scanline_spacing: {
+          default: 1,
+          min: 1,
+          max: 4,
+          nameKey: "config.retrogfx.value.scanline_spacing",
+          descriptionKey: "config.retrogfx.help.scanline_spacing"
+        },
+        scanline_opacity: {
+          default: 5,
+          min: 1,
+          max: 10,
+          nameKey: "config.retrogfx.value.scanline_opacity",
+          descriptionKey: "config.retrogfx.help.scanline_opacity"
+        },
+        scanline_scale: {
+          default: 10,
+          min: 1,
+          max: 20,
+          nameKey: "config.retrogfx.value.scanline_scale",
+          descriptionKey: "config.retrogfx.help.scanline_scale"
+        },
+        blurry_scanlines: {
+          default: false,
+          nameKey: "config.retrogfx.value.blurry_scanlines",
+          descriptionKey: "config.retrogfx.help.blurry_scanlines"
+        },
+      }
+    }
+  ],
+
+  programs: [
+    {
+      name: "downscaler",
+      vertexSource: "retrogfx:shaders/post/downscaler.vert",
+      fragmentSource: "canvas:shaders/pipeline/post/copy.frag",
+      samplers: [
+        "_cvu_input"
+      ],
+    },
+    {
+      name: "upscaler",
+      vertexSource: "canvas:shaders/pipeline/post/simple_full_frame.vert",
+      fragmentSource: "retrogfx:shaders/post/upscaler.frag",
+      samplers: [
+        "cvu_input"
+      ],
+    },
+  ],
+}

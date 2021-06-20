@@ -1,4 +1,0 @@
-{
-	"pipeline.downscaler_linear.name": "Downscaler Linear",
-	"pipeline.downscaler_linear.desc": "Standard with linear downscaling"
-}

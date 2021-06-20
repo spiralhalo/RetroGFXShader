@@ -1,0 +1,28 @@
+{
+	"pipeline.retrogfx_linear.name": "Retro GFX Linear",
+	"pipeline.retrogfx_linear.desc": "Retro graphics with linear downscaling",
+	"pipeline.retrogfx_nearest.name": "Retro GFX Nearest",
+	"pipeline.retrogfx_nearest.desc": "Retro graphics with nearest downscaling",
+
+    "config.retrogfx.category.features": "Retro GFX",
+    "config.retrogfx.value.downscaler_scale": "Image scaling (1:10)",
+    "config.retrogfx.help.downscaler_scale": "Scaling of output image, in 1:10 scale",
+    "config.retrogfx.value.monochrome": "Monochrome",
+    "config.retrogfx.help.monochrome": "Monochrome mode",
+    "config.retrogfx.value.monochrome_r": "Monochrome R",
+    "config.retrogfx.help.monochrome_r": "Monochrome red tint",
+    "config.retrogfx.value.monochrome_g": "Monochrome G",
+    "config.retrogfx.help.monochrome_g": "Monochrome green tint",
+    "config.retrogfx.value.monochrome_b": "Monochrome B",
+    "config.retrogfx.help.monochrome_b": "Monochrome blue tint",
+    "config.retrogfx.value.scanlines": "Scanlines",
+    "config.retrogfx.help.scanlines": "Display scanlines",
+    "config.retrogfx.value.scanline_spacing": "Scanline spacing",
+    "config.retrogfx.help.scanline_spacing": "Spacing of the scanlines",
+    "config.retrogfx.value.scanline_opacity": "Scanline opacity",
+    "config.retrogfx.help.scanline_opacity": "Opacity of the scanlines",
+    "config.retrogfx.value.scanline_scale": "Scanline scale",
+    "config.retrogfx.help.scanline_scale": "Scale of the scanlines",
+    "config.retrogfx.value.blurry_scanlines": "Blurry scanline",
+    "config.retrogfx.help.blurry_scanlines": "Blur the scanlines"
+}

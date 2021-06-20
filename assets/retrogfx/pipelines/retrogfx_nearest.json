@@ -1,6 +1,6 @@
 {
-	nameKey: "pipeline.downscaler_linear.name",
-	descriptionKey: "pipeline.downscaler_linear.desc",
+	nameKey: "pipeline.retrogfx_nearest.name",
+	descriptionKey: "pipeline.retrogfx_nearest.desc",
 
 	materialProgram: {
 		vertexSource: "canvas:shaders/pipeline/standard.vert",
@@ -19,11 +19,13 @@
 	},
 
 	include: [
+		"retrogfx:pipeline/retrogfx.json",
 		"canvas:pipeline/base.json",
 		"canvas:pipeline/basic_light_config.json",
 		"canvas:pipeline/fog_config.json",
 		"canvas:pipeline/handheld_light_config.json",
 		"canvas:pipeline/bloom.json",
-		"canvas:pipeline/fabulous.json"
+		"canvas:pipeline/fabulous.json",
+		"retrogfx:pipeline/nearest_passes.json",
 	],
 }

@@ -1,0 +1,50 @@
+{
+	afterRenderHand: {
+		passes: [
+			{
+				name: "downscaler",
+				program: "downscaler",
+				framebuffer: "downscaled_linear",
+				samplerImages: ["solid_main"]
+			},
+			{
+				name: "upscaler",
+				program: "upscaler",
+				framebuffer: "main_copy",
+				samplerImages: ["downscaled_linear"]
+			},
+			{
+				name: "back_to_main",
+				program: "copy",
+				framebuffer: "default",
+				samplerImages: ["main_copy"]
+			}
+		]
+	},
+
+  images: [
+    {
+      name: "downscaled_linear",
+      lod: 0,
+      internalFormat: "RGB8",
+      pixelFormat: "RGB",
+      pixelDataType: "UNSIGNED_BYTE",
+      target: "TEXTURE_2D",
+      texParams: [
+        {name: "TEXTURE_MIN_FILTER", val: "LINEAR"},
+        {name: "TEXTURE_MAG_FILTER", val: "LINEAR"},
+        {name: "TEXTURE_WRAP_S", val: "CLAMP_TO_EDGE"},
+        {name: "TEXTURE_WRAP_T", val: "CLAMP_TO_EDGE"}
+      ]
+    },
+  ],
+
+  framebuffers: [
+    {
+			name: "downscaled_linear",
+			colorAttachments: [
+        {image: "downscaled_linear", clearColor: 0x00000000},
+      ]
+		}
+	]
+}
