@@ -1,0 +1,29 @@
+{
+	nameKey: "pipeline.downscaler_linear.name",
+	descriptionKey: "pipeline.downscaler_linear.desc",
+
+	materialProgram: {
+		vertexSource: "canvas:shaders/pipeline/standard.vert",
+		fragmentSource: "canvas:shaders/pipeline/standard.frag",
+		samplers: [],
+		samplerImages: []
+	},
+
+	drawTargets: {
+		solidTerrain: "solid",
+		translucentTerrain: "translucent",
+		translucentEntity: "entity",
+		weather: "weather",
+		clouds: "clouds",
+		translucentParticles: "particles"
+	},
+
+	include: [
+		"canvas:pipeline/base.json",
+		"canvas:pipeline/basic_light_config.json",
+		"canvas:pipeline/fog_config.json",
+		"canvas:pipeline/handheld_light_config.json",
+		"canvas:pipeline/bloom.json",
+		"canvas:pipeline/fabulous.json"
+	],
+}
